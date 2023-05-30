@@ -1,0 +1,42 @@
+@import '/styles/sass/variables';
+@import '/styles/sass/animations';
+
+.proceedContainer {
+  position: fixed;
+  bottom: -5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+  transition: transform $transition-duration;
+  &.right {
+    transform: translate(65vw, -8rem);
+  }
+  &.left {
+    transform: translate(25vw, -8rem);
+    .arrow {
+      transform: scaleX(-1);
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    color: $color-med;
+  }
+  .text {
+    font-size: 3.2rem;
+    background-color: rgba($color-white, 1);
+    padding: 1rem;
+    border-radius: $btn-border-radius;
+    transition: all $transition-duration / 2;
+  }
+  .arrow {
+    font-size: 6rem;
+    scale: (-1);
+    position: absolute;
+    bottom: -2rem;
+    animation: bounce 1s ease-in-out infinite;
+    transition: all $transition-duration / 2;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}

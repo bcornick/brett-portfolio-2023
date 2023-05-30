@@ -1,0 +1,131 @@
+@import '/styles/sass/variables';
+
+@mixin safari-overflow {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+@mixin sectionInit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contentBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $content-gap / 2;
+    height: $content-box-height;
+    max-height: $content-box-max-height;
+    width: $content-box-width;
+    margin-bottom: $navbar-height * 1.5;
+    background-image: $white-gradient;
+    border-radius: $box-border-radius;
+    padding: $content-box-padding;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 15px rgba($color-dark, 0.15);
+    overflow: hidden;
+    @include safari-overflow;
+    .titleBox {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $content-gap / 2;
+      height: calc($content-box-height - $content-box-padding * 2);
+      max-height: calc($content-box-max-height - $content-box-padding * 2);
+      .sectionTitle {
+        font-size: 4rem;
+        text-align: center;
+        z-index: 10;
+      }
+    }
+    .contentGrid {
+      flex: 2;
+      display: grid;
+      height: calc($content-box-height - $content-box-padding * 2);
+      max-height: calc($content-box-max-height - $content-box-padding * 2);
+      gap: $content-gap / 3;
+      .gridItem {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(
+          to bottom,
+          rgba($color-dark, 0.85),
+          rgba($color-dark, 1)
+        );
+        border-radius: $box-border-radius;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+        @include safari-overflow;
+        transition: all 0.2s;
+        &:hover {
+          cursor: pointer;
+          translate: 0 2px;
+          box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
+          .gridImage {
+            filter: saturate(1.1) brightness(1.1);
+          }
+          .text {
+            box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
+            translate: 0 2px;
+          }
+        }
+        .gridImage {
+          transition: all 0.2s;
+          object-fit: cover;
+        }
+        .text {
+          position: absolute;
+          bottom: 1.5rem;
+          margin: auto;
+          max-width: calc(100% - 2 * 1.5rem);
+          background-image: linear-gradient(
+            to bottom,
+            $color-white 30%,
+            rgba($color-white, 0.85)
+          );
+          backdrop-filter: blur(10px);
+          border-radius: $btn-border-radius;
+          box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+          padding: 1rem 1.8rem;
+          transition: all 0.2s;
+          .itemTitle {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+          }
+          .description {
+            font-size: 1.8rem;
+            margin-top: 0.7rem;
+          }
+        }
+        .popBtn {
+          position: absolute;
+          z-index: 100;
+          top: 1.5rem;
+          right: 1.5rem;
+          border-radius: 50%;
+          background-color: rgba($color-white, 0.85);
+          box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+          font-size: 2rem;
+          width: 4.5rem;
+          height: 4.5rem;
+          font-weight: 900;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+          &:hover {
+            background-color: rgba($color-white, 1);
+            box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
+            translate: 0 2px;
+            color: $color-med;
+          }
+        }
+      }
+    }
+  }
+}

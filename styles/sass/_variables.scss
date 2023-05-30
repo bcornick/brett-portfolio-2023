@@ -1,0 +1,25 @@
+$color-light: #6ce9fb;
+$color-med: #265ecc;
+$color-dark: #1b3d81;
+$color-white: #fff;
+
+$white-gradient: linear-gradient(
+  to bottom,
+  rgba($color-white, 0.75),
+  rgba($color-white, 1)
+);
+
+$box-border-radius: 2rem;
+$btn-border-radius: 1rem;
+$content-box-height: 70vh;
+$content-box-width: 85%;
+$content-box-max-height: 60rem;
+$content-box-padding: 5rem;
+$navbar-height: 5rem;
+$content-gap: 5rem;
+$max-page-width: 140rem;
+$page-margin-large: 8rem;
+$page-margin-small: 4rem;
+$page-margin-xsmall: 2rem;
+
+$transition-duration: 0.7s;

@@ -1,0 +1,17 @@
+@keyframes fullRotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -7px;
+  }
+  100% {
+    translate: 0;
+  }
+}

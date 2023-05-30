@@ -1,0 +1,126 @@
+@import '/styles/sass/variables';
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    gap: $content-gap / 2;
+    width: 63.5rem;
+    z-index: 1;
+    .textBox {
+      display: flex;
+      flex-direction: column;
+      background-image: $white-gradient;
+      border-radius: $box-border-radius;
+      padding: 3rem;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 0 15px rgba($color-dark, 0.15);
+      .head {
+        font-size: 10rem;
+      }
+      .subHead {
+        font-size: 4rem;
+      }
+      .description {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        margin: 2rem 0;
+      }
+      .location {
+        display: flex;
+        align-items: flex-end;
+        width: fit-content;
+        align-self: flex-end;
+        gap: 0.8rem;
+        font-size: 2.2rem;
+        transition: all 0.2s;
+        &:hover {
+          filter: brightness(1.5);
+        }
+        .pin {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      .skill {
+        font-size: 3.5rem;
+        border-radius: $btn-border-radius;
+        padding: 1rem 2rem;
+        box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+        transition: all 0.2s;
+        &:hover {
+          translate: 0 2px;
+          box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
+          cursor: default;
+        }
+        &.lightBlue {
+          background-image: linear-gradient(
+            to bottom,
+            $color-light,
+            darken($color-light, 25%)
+          );
+        }
+        &.darkBlue {
+          color: $color-white;
+          background-image: linear-gradient(
+            to bottom,
+            lighten($color-dark, 20%),
+            $color-dark
+          );
+        }
+      }
+    }
+  }
+  .imageBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -7%;
+    right: -32%;
+    .profileImage {
+      object-fit: contain;
+      filter: saturate(1.1);
+    }
+  }
+  .badges {
+    position: absolute;
+    right: 6%;
+    top: 60%;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+    z-index: 1;
+    .experience,
+    .degree {
+      background-image: linear-gradient(
+        to bottom,
+        lighten($color-dark, 20%),
+        $color-dark
+      );
+      width: fit-content;
+      border-radius: $btn-border-radius;
+      padding: 2rem;
+      box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+    }
+    .experience {
+      font-size: 2rem;
+      span {
+        font-size: 7rem;
+        display: block;
+      }
+    }
+    .degree {
+      font-size: 2.2rem;
+    }
+  }
+}

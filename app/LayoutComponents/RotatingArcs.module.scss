@@ -1,0 +1,31 @@
+@import '/styles/sass/animations';
+@import '/styles/sass/variables';
+
+.arcsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: -15%;
+  z-index: -1;
+  transition: all $transition-duration;
+  &.right {
+    transform: translateX(24vw) rotate(360deg);
+  }
+  &.left {
+    transform: translateX(-24vw) rotate(0deg);
+  }
+  .arcs {
+    object-fit: contain;
+    &:nth-child(1) {
+      scale: 0.4;
+      animation: fullRotation 15s linear infinite;
+    }
+    &:nth-child(2) {
+      animation: fullRotation 30s linear infinite reverse;
+    }
+    &:nth-child(3) {
+      scale: 2.5;
+      animation: fullRotation 45s linear infinite;
+    }
+  }
+}

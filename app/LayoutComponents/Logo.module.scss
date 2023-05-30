@@ -1,0 +1,13 @@
+@import '/styles/sass/variables';
+
+.logoBox {
+  position: relative;
+  height: $navbar-height - 0.5rem;
+  width: $navbar-height - 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+  .logo {
+    object-fit: contain;
+  }
+}

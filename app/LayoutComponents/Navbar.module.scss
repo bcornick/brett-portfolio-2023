@@ -1,0 +1,39 @@
+@import '/styles/sass/variables';
+
+.navbar {
+  width: 100%;
+  height: $navbar-height;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  .innerNav {
+    max-width: $max-page-width;
+    width: calc(100vw - $page-margin-large * 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .socialsBox {
+      display: flex;
+      gap: $content-gap;
+      .social {
+        background-color: $color-dark;
+        border-radius: 50%;
+        height: $navbar-height - 1.5rem;
+        width: $navbar-height - 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        &:hover {
+          background-color: $color-med;
+        }
+        .icon {
+          height: $navbar-height - 3rem;
+          width: $navbar-height - 3rem;
+        }
+      }
+    }
+  }
+}

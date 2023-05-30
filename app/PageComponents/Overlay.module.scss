@@ -1,0 +1,35 @@
+@import '/styles/sass/variables';
+
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-image: $white-gradient;
+  backdrop-filter: blur(3px);
+  padding: 2rem;
+  filter: opacity(0);
+  transition: all 0.5s;
+  .item {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    &:nth-child(1) {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  &.show {
+    filter: opacity(1);
+  }
+}

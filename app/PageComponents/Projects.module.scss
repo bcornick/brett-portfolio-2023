@@ -1,0 +1,23 @@
+@import '/styles/sass/mixins';
+
+.projectsSection {
+  @include sectionInit;
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'item1 item2'
+      'item1 item3';
+    .gridItem {
+      &:nth-child(1) {
+        grid-area: item1;
+      }
+      &:nth-child(2) {
+        grid-area: item2;
+      }
+      &:nth-child(3) {
+        grid-area: item3;
+      }
+    }
+  }
+}

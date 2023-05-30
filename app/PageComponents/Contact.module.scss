@@ -1,0 +1,56 @@
+@import '/styles/sass/mixins';
+
+.contactSection {
+  @include sectionInit;
+  .contentGrid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      'item1 item2 item3 item4'
+      'item1 item2 item3 item4'
+      'item1 item2 item3 item4'
+      'item1 item2 item5 item5'
+      'item1 item2 item5 item5';
+    .gridItem {
+      &:nth-child(1n) {
+        .gridImage {
+          object-fit: contain;
+        }
+      }
+      &:nth-child(1) {
+        grid-area: item1;
+      }
+      &:nth-child(2) {
+        grid-area: item2;
+        background-image: linear-gradient(
+          to bottom,
+          rgba($color-light, 0.75),
+          rgba($color-light, 1)
+        );
+      }
+      &:nth-child(3) {
+        grid-area: item3;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(#f44d27, 0.75),
+          rgba(#f44d27, 1)
+        );
+      }
+      &:nth-child(4) {
+        grid-area: item4;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(black, 0.75),
+          rgba(black, 1)
+        );
+      }
+      &:nth-child(5) {
+        grid-area: item5;
+        .gridImage {
+          object-position: top;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
