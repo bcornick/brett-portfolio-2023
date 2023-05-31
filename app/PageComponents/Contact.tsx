@@ -56,7 +56,7 @@ const Contact = () => {
                 src={contact.image}
                 alt={contact.link}
                 fill
-                sizes="20px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.gridImage}
               />
               <div className={styles.popBtn}>{'\u2197'}</div>
