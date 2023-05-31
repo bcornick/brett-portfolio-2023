@@ -1,4 +1,4 @@
-@import '/styles/sass/variables';
+@import '/styles/sass/mixins';
 
 .overlay {
   position: absolute;
@@ -13,11 +13,14 @@
   left: 0;
   right: 0;
   z-index: 10;
+  border-radius: $box-border-radius;
   background-image: $white-gradient;
-  backdrop-filter: blur(3px);
   padding: 2rem;
   filter: opacity(0);
   transition: all 0.5s;
+  @include screen-tablet-lg {
+    display: none;
+  }
   .item {
     font-size: 2.4rem;
     line-height: 3rem;
@@ -31,5 +34,6 @@
   }
   &.show {
     filter: opacity(1);
+    backdrop-filter: blur(3px);
   }
 }

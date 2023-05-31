@@ -1,14 +1,26 @@
-@import '/styles/sass/variables';
+@import '/styles/sass/mixins';
 
 .heroSection {
   display: flex;
   align-items: center;
+  @include screen-tablet-sm {
+    flex-direction: column;
+    justify-content: center;
+  }
   .textContent {
     display: flex;
     flex-direction: column;
     gap: $content-gap / 2;
     width: 63.5rem;
     z-index: 1;
+    @include screen-tablet-lg {
+      width: 50rem;
+    }
+    @include screen-tablet-sm {
+      width: 100%;
+      max-width: 50rem;
+      margin-top: 45vh;
+    }
     .textBox {
       display: flex;
       flex-direction: column;
@@ -19,14 +31,34 @@
       box-shadow: 0 0 15px rgba($color-dark, 0.15);
       .head {
         font-size: 10rem;
+        @include screen-tablet-lg {
+          font-size: 7.5rem;
+        }
+        @include screen-tablet-sm {
+          font-size: 6rem;
+        }
       }
       .subHead {
         font-size: 4rem;
+        @include screen-tablet-lg {
+          font-size: 3.2rem;
+        }
+        @include screen-tablet-sm {
+          font-size: 2.6rem;
+        }
       }
       .description {
         font-size: 2.8rem;
         line-height: 3.4rem;
         margin: 2rem 0;
+        @include screen-tablet-lg {
+          font-size: 2.4rem;
+          line-height: 3rem;
+        }
+        @include screen-tablet-sm {
+          font-size: 2rem;
+          line-height: 2.6rem;
+        }
       }
       .location {
         display: flex;
@@ -39,6 +71,12 @@
         &:hover {
           filter: brightness(1.5);
         }
+        @include screen-tablet-lg {
+          font-size: 2rem;
+        }
+        @include screen-tablet-sm {
+          font-size: 1.8rem;
+        }
         .pin {
           width: 2.6rem;
           height: 2.6rem;
@@ -50,12 +88,25 @@
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: space-between;
+      @include screen-tablet-lg {
+        gap: 1rem;
+      }
+      @include screen-tablet-sm {
+        margin-bottom: $content-gap * 2;
+      }
       .skill {
         font-size: 3.5rem;
         border-radius: $btn-border-radius;
         padding: 1rem 2rem;
         box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
         transition: all 0.2s;
+        @include screen-tablet-lg {
+          font-size: 2.8rem;
+          padding: 0.8rem 1.6rem;
+        }
+        @include screen-tablet-sm {
+          font-size: min(4.5vw, 2.8rem);
+        }
         &:hover {
           translate: 0 2px;
           box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
@@ -85,6 +136,17 @@
     height: 100%;
     top: -7%;
     right: -32%;
+    @include screen-tablet-lg {
+      left: 43rem;
+    }
+    @include screen-tablet-sm {
+      position: absolute;
+      top: 0;
+      right: unset;
+      left: 15rem;
+      width: 55rem;
+      height: 55rem;
+    }
     .profileImage {
       object-fit: contain;
       filter: saturate(1.1);
@@ -100,6 +162,13 @@
     align-items: flex-end;
     gap: 1.5rem;
     z-index: 1;
+    @include screen-tablet-lg {
+      right: 3%;
+      top: 70%;
+    }
+    @include screen-tablet-sm {
+      display: none;
+    }
     .experience,
     .degree {
       background-image: linear-gradient(
@@ -111,16 +180,28 @@
       border-radius: $btn-border-radius;
       padding: 2rem;
       box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
+      @include screen-tablet-lg {
+        padding: 1.5rem;
+      }
     }
     .experience {
       font-size: 2rem;
+      @include screen-tablet-lg {
+        font-size: 1.6rem;
+      }
       span {
         font-size: 7rem;
         display: block;
+        @include screen-tablet-lg {
+          font-size: 5.5rem;
+        }
       }
     }
     .degree {
       font-size: 2.2rem;
+      @include screen-tablet-lg {
+        font-size: 2rem;
+      }
     }
   }
 }

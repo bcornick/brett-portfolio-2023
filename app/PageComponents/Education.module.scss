@@ -11,6 +11,23 @@
       'item1 item2'
       'item1 item3'
       'item1 item3';
+    @include screen-tablet-lg {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        'item1'
+        'item1'
+        'item2'
+        'item2'
+        'item3';
+    }
+    @include screen-tablet-sm {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        'item1'
+        'item2'
+        'item3';
+    }
     .gridItem {
       &:nth-child(1) {
         grid-area: item1;

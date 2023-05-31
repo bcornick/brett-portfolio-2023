@@ -8,7 +8,7 @@ import Overlay from './Overlay';
 import AnimatedShape from './AnimatedShape';
 import styles from './Experience.module.scss';
 
-const spline = 'https://prod.spline.design/VIeGO0bkrg1UqRDV/scene.splinecode';
+const spline = 'https://prod.spline.design/diJXqe6MFf5d3TZU/scene.splinecode';
 
 const experiences = [
   {

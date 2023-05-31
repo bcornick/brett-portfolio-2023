@@ -19,11 +19,7 @@ const Overlay = ({ content }: OverlayProps) => {
       {content.map((item, i) => (
         <li
           key={i}
-          className={
-            content[0].length === 9
-              ? `${styles.item} ${styles.emojis}`
-              : styles.item
-          }>
+          className={styles.item}>
           {item}
         </li>
       ))}

@@ -11,33 +11,14 @@ interface AnimatedShapeProps {
 }
 
 const AnimatedShape = ({ splineUrl }: AnimatedShapeProps) => {
-  //   const [dims, setDims] = useState({ width: '0px', height: '0px' });
-
-  //   let large = true; // can add other sizing if needed
-
-  //   const displaySizes = {
-  //     large: { width: '100%', height: '30rem' },
-  //     medium: { width: '', height: '' },
-  //     small: { width: '', height: '' },
-  //   };
-
   return (
-    <div
-      className={styles.splineContainer}
-      //   style={{ width: dims.width, height: dims.height }}
-    >
+    <div className={styles.splineContainer}>
+      <div className={styles.scrollOverlay}></div>
       <Suspense fallback={<div>loading...</div>}>
         <Spline
           scene={splineUrl}
-          //   onLoad={() => {
-          //     large &&
-          //       setDims({
-          //         width: displaySizes.large.width,
-          //         height: displaySizes.large.height,
-          //       });
-          //   }}
           className={styles.splineObj}
-          //   style={{ width: dims.width, height: dims.height }}
+          style={{ height: '99%', width: '100%' }}
         />
       </Suspense>
     </div>

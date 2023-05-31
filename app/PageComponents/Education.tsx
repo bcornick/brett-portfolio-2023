@@ -6,7 +6,7 @@ import extension from '@/public/extension.jpg';
 import AnimatedShape from './AnimatedShape';
 import styles from './Education.module.scss';
 
-const spline = 'https://prod.spline.design/QhCIqzKpz24XyWC9/scene.splinecode';
+const spline = 'https://prod.spline.design/BOSpP7BJHR44A0a2/scene.splinecode';
 
 const degrees = [
   {

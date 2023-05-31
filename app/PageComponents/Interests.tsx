@@ -9,7 +9,7 @@ import design from '@/public/digital-design.jpg';
 import AnimatedShape from './AnimatedShape';
 import styles from './Interests.module.scss';
 
-const spline = 'https://prod.spline.design/Ab7JjIWAesET8jog/scene.splinecode';
+const spline = 'https://prod.spline.design/SJ18ozt-oay46tVJ/scene.splinecode';
 
 const interests = [
   { title: 'Digital Design', image: design },

@@ -1,4 +1,4 @@
-@import '/styles/sass/variables';
+@import '/styles/sass/mixins';
 @import '/styles/sass/animations';
 
 .proceedContainer {
@@ -9,11 +9,20 @@
   align-items: flex-end;
   z-index: 10;
   transition: transform $transition-duration;
+  @include screen-tablet-sm {
+    display: none;
+  }
   &.right {
     transform: translate(65vw, -8rem);
+    @include screen-tablet-lg {
+      transform: translate(55vw, -8rem);
+    }
   }
   &.left {
     transform: translate(25vw, -8rem);
+    @include screen-tablet-lg {
+      transform: translate(15vw, -8rem);
+    }
     .arrow {
       transform: scaleX(-1);
     }

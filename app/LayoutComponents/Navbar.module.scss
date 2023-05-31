@@ -1,4 +1,4 @@
-@import '/styles/sass/variables';
+@import '/styles/sass/mixins';
 
 .navbar {
   width: 100%;
@@ -14,14 +14,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include screen-tablet-sm {
+      width: calc(100vw - $page-margin-small * 2);
+    }
+    @include screen-mobile-lg {
+      width: calc(100vw - $page-margin-xsmall * 2);
+    }
     .socialsBox {
       display: flex;
       gap: $content-gap;
+      @include screen-tablet-sm {
+        gap: $content-gap / 2;
+      }
       .social {
         background-color: $color-dark;
         border-radius: 50%;
-        height: $navbar-height - 1.5rem;
-        width: $navbar-height - 1.5rem;
+        height: $navbar-height - 15px;
+        width: $navbar-height - 15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -30,8 +39,8 @@
           background-color: $color-med;
         }
         .icon {
-          height: $navbar-height - 3rem;
-          width: $navbar-height - 3rem;
+          height: $navbar-height - 30px;
+          width: $navbar-height - 30px;
         }
       }
     }

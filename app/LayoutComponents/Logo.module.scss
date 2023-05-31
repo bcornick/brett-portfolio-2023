@@ -2,8 +2,8 @@
 
 .logoBox {
   position: relative;
-  height: $navbar-height - 0.5rem;
-  width: $navbar-height - 0.5rem;
+  height: $navbar-height - 5px;
+  width: $navbar-height - 5px;
   &:hover {
     cursor: pointer;
   }

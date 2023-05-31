@@ -1,6 +1,19 @@
+@import '/styles/sass/mixins';
+
 .splineContainer {
   flex: 1;
+  position: relative;
+  .scrollOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    z-index: 10;
+  }
   .splineObj {
-    transform: scale(1.5) translateY(1rem);
+    transform: scale(1.25);
+    height: 99%;
+    width: 100%;
   }
 }

@@ -4,6 +4,9 @@
   @include sectionInit;
   .contentBox {
     flex-direction: row-reverse;
+    @include screen-tablet-sm {
+      flex-direction: column;
+    }
     .contentGrid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -11,9 +14,24 @@
         'item1 item2'
         'item3 item4'
         'item5 item6';
+      @include screen-tablet-sm {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          'item1'
+          'item2'
+          'item3'
+          'item4';
+      }
       .gridItem {
         .text {
           right: 1.5rem;
+          @include screen-tablet-lg {
+            .itemTitle {
+              font-size: 2rem;
+              letter-spacing: 0px;
+            }
+          }
         }
         &:hover {
           cursor: default;
@@ -32,9 +50,15 @@
         }
         &:nth-child(5) {
           grid-area: item5;
+          @include screen-tablet-sm {
+            display: none;
+          }
         }
         &:nth-child(6) {
           grid-area: item6;
+          @include screen-tablet-sm {
+            display: none;
+          }
         }
       }
     }

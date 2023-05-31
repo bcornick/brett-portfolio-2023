@@ -27,6 +27,15 @@
     box-shadow: 0 0 15px rgba($color-dark, 0.15);
     overflow: hidden;
     @include safari-overflow;
+    @include screen-tablet-lg {
+      padding: $content-box-padding / 2;
+      width: 100%;
+    }
+    @include screen-tablet-sm {
+      flex-direction: column;
+      height: 100vh;
+      max-height: none;
+    }
     .titleBox {
       flex: 1;
       display: flex;
@@ -35,6 +44,9 @@
       gap: $content-gap / 2;
       height: calc($content-box-height - $content-box-padding * 2);
       max-height: calc($content-box-max-height - $content-box-padding * 2);
+      @include screen-tablet-lg {
+        flex: 4;
+      }
       .sectionTitle {
         font-size: 4rem;
         text-align: center;
@@ -47,6 +59,13 @@
       height: calc($content-box-height - $content-box-padding * 2);
       max-height: calc($content-box-max-height - $content-box-padding * 2);
       gap: $content-gap / 3;
+      @include screen-tablet-lg {
+        flex: 7;
+      }
+      @include screen-tablet-sm {
+        width: 100%;
+        flex: 10;
+      }
       .gridItem {
         text-align: center;
         display: flex;
@@ -92,6 +111,9 @@
           border-radius: $btn-border-radius;
           box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
           padding: 1rem 1.8rem;
+          @include screen-tablet-lg {
+            padding: 0.8rem 1.6rem;
+          }
           transition: all 0.2s;
           .itemTitle {
             font-size: 2.5rem;
@@ -100,6 +122,9 @@
           .description {
             font-size: 1.8rem;
             margin-top: 0.7rem;
+            @include screen-tablet-lg {
+              display: none;
+            }
           }
         }
         .popBtn {
@@ -127,5 +152,42 @@
         }
       }
     }
+  }
+}
+
+// Breakpoints
+@mixin screen-desktop-md {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screen-desktop-sm {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-lg {
+  @media (max-width: 999px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-lg {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-sm {
+  @media (max-width: 375px) {
+    @content;
   }
 }
