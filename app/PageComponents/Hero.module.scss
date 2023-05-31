@@ -3,6 +3,7 @@
 .heroSection {
   display: flex;
   align-items: center;
+  overflow-x: hidden;
   @include screen-tablet-sm {
     flex-direction: column;
     justify-content: center;
