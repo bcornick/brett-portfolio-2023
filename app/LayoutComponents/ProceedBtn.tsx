@@ -19,13 +19,13 @@ const ProceedBtn = () => {
   const { section, updateSection } = useContext(SectionContext);
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: 'smooth',
-  //   });
-  // }, [pathname]);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [pathname]);
 
   const setCurrentSection = () => {
     if (section >= sections.length - 1) {
