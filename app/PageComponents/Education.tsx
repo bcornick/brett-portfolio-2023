@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import shape from '@/public/shape2.jpg';
 import ucla from '@/public/ucla.jpg';
 import usc from '@/public/usc.jpg';
 import extension from '@/public/extension.jpg';
@@ -33,7 +34,10 @@ const Education = () => {
       id="education">
       <div className={styles.contentBox}>
         <div className={styles.titleBox}>
-          <AnimatedShape splineUrl={spline} />
+          <AnimatedShape
+            splineUrl={spline}
+            staticImg={shape}
+          />
           <h2 className={styles.sectionTitle}>Education</h2>
         </div>
         <div className={styles.contentGrid}>
@@ -45,7 +49,7 @@ const Education = () => {
                 src={degree.image}
                 alt={degree.title}
                 fill
-                sizes="20vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.gridImage}
               />
               <div className={styles.text}>

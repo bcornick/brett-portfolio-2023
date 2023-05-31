@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import shape from '@/public/shape6.jpg';
 import gaming from '@/public/gaming.jpg';
 import blockchain from '@/public/blockchain.jpg';
 import sustainability from '@/public/sustainability.jpg';
@@ -27,7 +28,10 @@ const Interests = () => {
       id="interests">
       <div className={styles.contentBox}>
         <div className={styles.titleBox}>
-          <AnimatedShape splineUrl={spline} />
+          <AnimatedShape
+            splineUrl={spline}
+            staticImg={shape}
+          />
           <h2 className={styles.sectionTitle}>Interests</h2>
         </div>
         <div className={styles.contentGrid}>
@@ -39,7 +43,7 @@ const Interests = () => {
                 src={interest.image}
                 alt={interest.title}
                 fill
-                sizes="20vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.gridImage}
               />
               <div className={styles.text}>

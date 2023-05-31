@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import shape from '@/public/shape4.jpg';
 import ifLogo from '@/public/if.jpg';
 import epic from '@/public/epic.jpg';
 import accenture from '@/public/accenture.jpg';
@@ -48,7 +49,10 @@ const Experience = () => {
       id="experience">
       <div className={styles.contentBox}>
         <div className={styles.titleBox}>
-          <AnimatedShape splineUrl={spline} />
+          <AnimatedShape
+            splineUrl={spline}
+            staticImg={shape}
+          />
           <h2 className={styles.sectionTitle}>Work Experience</h2>
         </div>
         <div className={styles.contentGrid}>
@@ -60,7 +64,7 @@ const Experience = () => {
                 src={experience.image}
                 alt={experience.title}
                 fill
-                sizes="20vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.gridImage}
               />
               <div className={styles.text}>

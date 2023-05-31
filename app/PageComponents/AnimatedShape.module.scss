@@ -17,3 +17,12 @@
     width: 100%;
   }
 }
+
+.staticImg {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  .shape {
+    object-fit: contain;
+  }
+}

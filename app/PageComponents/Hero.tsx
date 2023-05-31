@@ -55,7 +55,7 @@ const Hero = () => {
           src={brett}
           alt="Brett"
           fill
-          sizes="60vw"
+          sizes="70vw"
           className={styles.profileImage}
         />
       </div>

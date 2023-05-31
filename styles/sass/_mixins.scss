@@ -46,6 +46,7 @@
       max-height: calc($content-box-max-height - $content-box-padding * 2);
       @include screen-tablet-lg {
         flex: 4;
+        width: 100%;
       }
       .sectionTitle {
         font-size: 4rem;

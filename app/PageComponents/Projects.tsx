@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import shape from '@/public/shape3.jpg';
 import lovebites from '@/public/lovebites.jpg';
 import intheory from '@/public/intheory.jpg';
 import counterparts from '@/public/counterparts.jpg';
@@ -48,7 +49,10 @@ const Projects = () => {
       id="projects">
       <div className={styles.contentBox}>
         <div className={styles.titleBox}>
-          <AnimatedShape splineUrl={spline} />
+          <AnimatedShape
+            splineUrl={spline}
+            staticImg={shape}
+          />
           <h2 className={styles.sectionTitle}>Latest Projects</h2>
         </div>
         <div className={styles.contentGrid}>
@@ -60,7 +64,7 @@ const Projects = () => {
                 src={project.image}
                 alt={project.title}
                 fill
-                sizes="20vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className={styles.gridImage}
               />
               <div className={styles.text}>

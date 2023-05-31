@@ -25,7 +25,7 @@ const Logo = () => {
         src={bLogo}
         alt="B"
         fill
-        sizes="5rem"
+        sizes="50px"
         className={styles.logo}
       />
     </div>

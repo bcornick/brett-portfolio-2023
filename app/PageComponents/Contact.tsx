@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import shape from '@/public/shape1.jpg';
 import linkedin from '@/public/linkedin.svg';
 import twitter from '@/public/twitter.svg';
 import github from '@/public/github.svg';
@@ -37,7 +38,10 @@ const Contact = () => {
       id="contact">
       <div className={styles.contentBox}>
         <div className={styles.titleBox}>
-          <AnimatedShape splineUrl={spline} />
+          <AnimatedShape
+            splineUrl={spline}
+            staticImg={shape}
+          />
           <h2 className={styles.sectionTitle}>Contact</h2>
         </div>
         <div className={styles.contentGrid}>
@@ -52,7 +56,7 @@ const Contact = () => {
                 src={contact.image}
                 alt={contact.link}
                 fill
-                sizes="20vw"
+                sizes="20px"
                 className={styles.gridImage}
               />
               <div className={styles.popBtn}>{'\u2197'}</div>
