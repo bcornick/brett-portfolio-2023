@@ -118,7 +118,8 @@
           font-size: min(4.5vw, 2.8rem);
         }
         @include screen-mobile-sm {
-          font-size: min(4.3vw, 2.4rem);
+          font-size: min(4.2vw, 2.2rem);
+          padding: 0.6rem 1.2rem;
         }
         &:hover {
           translate: 0 2px;

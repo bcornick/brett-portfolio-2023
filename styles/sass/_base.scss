@@ -57,6 +57,12 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $color-white;
+  }
+}
+
 // Responsive root sizing
 @include screen-desktop-md {
   html {
