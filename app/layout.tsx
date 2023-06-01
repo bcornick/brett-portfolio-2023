@@ -4,7 +4,6 @@ import RotatingArcs from './LayoutComponents/RotatingArcs';
 import ProceedBtn from './LayoutComponents/ProceedBtn';
 import Navbar from './LayoutComponents/Navbar';
 import { SectionContextProvider } from './context/section';
-import SiteHeader from './LayoutComponents/SiteHeader';
 
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
@@ -12,6 +11,18 @@ export const metadata = {
   title: 'Brett Cornick',
   description:
     'Brett is a designer, developer, and scientist with 7+ years of professional experience.',
+  openGraph: {
+    title: 'Brett Cornick',
+    description:
+      'Brett is a designer, developer, and scientist with 7+ years of professional experience.',
+    image: 'https://i.imgur.com/YdX7SQH.jpeg',
+  },
+  twitter: {
+    title: 'Brett Cornick',
+    description:
+      'Brett is a designer, developer, and scientist with 7+ years of professional experience.',
+    image: 'https://i.imgur.com/YdX7SQH.jpeg',
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +32,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <SiteHeader />
       <body className={leagueSpartan.className}>
         <SectionContextProvider>
           <Navbar />
