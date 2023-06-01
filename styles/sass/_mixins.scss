@@ -136,7 +136,7 @@
           border-radius: 50%;
           background-color: rgba($color-white, 0.85);
           box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
-          font-size: 2rem;
+          font-size: 2.5rem;
           width: 4.5rem;
           height: 4.5rem;
           font-weight: 900;
@@ -144,6 +144,7 @@
           justify-content: center;
           align-items: center;
           transition: all 0.3s;
+          rotate: -45deg;
           &:hover {
             background-color: rgba($color-white, 1);
             box-shadow: 1px 1px 5px rgba($color-dark, 0.5);

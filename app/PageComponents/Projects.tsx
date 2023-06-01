@@ -76,7 +76,7 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noreferrer">
-                {'\u2197'}
+                &rarr;
               </a>
               <Overlay content={project.achievements} />
             </div>
