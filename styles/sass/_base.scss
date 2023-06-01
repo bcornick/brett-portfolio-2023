@@ -23,7 +23,10 @@ body {
 
 html {
   font-size: 62.5%; /* Equates to 1rem = 10px */
-  background-color: $color-white;
+}
+
+body {
+  background-color: $color-white !important;
 }
 
 main {

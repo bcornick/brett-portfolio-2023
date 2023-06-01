@@ -36,7 +36,7 @@
       border-radius: $box-border-radius;
       padding: 3rem;
       -webkit-backdrop-filter: blur(3px);
-              backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
       box-shadow: 0 0 15px rgba($color-dark, 0.15);
       .head {
         font-size: 10rem;
@@ -117,6 +117,9 @@
         @include screen-tablet-sm {
           font-size: min(4.5vw, 2.8rem);
         }
+        @include screen-mobile-sm {
+          font-size: min(4.3vw, 2.4rem);
+        }
         &:hover {
           translate: 0 2px;
           box-shadow: 1px 1px 5px rgba($color-dark, 0.5);
@@ -159,7 +162,7 @@
     }
     .profileImage {
       -o-object-fit: contain;
-         object-fit: contain;
+      object-fit: contain;
       filter: saturate(1.1);
     }
   }
