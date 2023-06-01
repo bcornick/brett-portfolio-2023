@@ -15,13 +15,13 @@ export const metadata = {
     title: 'Brett Cornick',
     description:
       'Brett is a designer, developer, and scientist with 7+ years of professional experience.',
-    image: 'https://i.imgur.com/YdX7SQH.jpeg',
+    images: ['https://i.imgur.com/YdX7SQH.jpeg'],
   },
   twitter: {
     title: 'Brett Cornick',
     description:
       'Brett is a designer, developer, and scientist with 7+ years of professional experience.',
-    image: 'https://i.imgur.com/YdX7SQH.jpeg',
+    images: ['https://i.imgur.com/YdX7SQH.jpeg'],
   },
 };
 
