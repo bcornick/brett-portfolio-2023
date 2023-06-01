@@ -1,9 +1,15 @@
 @import '/styles/sass/mixins';
 
+.overflowWrapper {
+  width: 100vw;
+  height: fit-content;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .heroSection {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
   @include screen-tablet-sm {
     flex-direction: column;
     justify-content: center;

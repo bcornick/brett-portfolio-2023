@@ -21,12 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={leagueSpartan.className}>
-        <SectionContextProvider>
-          <Navbar />
-          <RotatingArcs />
-          {children}
-          <ProceedBtn />
-        </SectionContextProvider>
+        <div className="overflowWrapper">
+          <SectionContextProvider>
+            <Navbar />
+            <RotatingArcs />
+            {children}
+            <ProceedBtn />
+          </SectionContextProvider>
+        </div>
       </body>
     </html>
   );
