@@ -36,9 +36,9 @@ const projects = [
   {
     title: 'Love Bites',
     description: 'A heartfelt food journal',
-    link: 'https://love-bites-food.vercel.app/',
+    link: 'https://www.emma-and-brett.us/',
     image: lovebites,
-    achievements: ['Custom, Unique', '- She loved it!'],
+    achievements: ['Custom, Unique', '- She loves it!'],
   },
 ];
 
