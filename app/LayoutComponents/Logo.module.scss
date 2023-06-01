@@ -8,6 +8,9 @@
     cursor: pointer;
   }
   .logo {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL0xvZ28ubW9kdWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0NBQWdDOztBQUVoQztFQUNFLGtCQUFrQjtFQUNsQiw0QkFBNEI7RUFDNUIsMkJBQTJCO0VBQzNCO0lBQ0UsZUFBZTtFQUNqQjtFQUNBO0lBQ0Usc0JBQW1CO09BQW5CLG1CQUFtQjtFQUNyQjtBQUNGIiwiZmlsZSI6IkxvZ28ubW9kdWxlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcvc3R5bGVzL3Nhc3MvdmFyaWFibGVzJztcblxuLmxvZ29Cb3gge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogJG5hdmJhci1oZWlnaHQgLSA1cHg7XG4gIHdpZHRoOiAkbmF2YmFyLWhlaWdodCAtIDVweDtcbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICB9XG4gIC5sb2dvIHtcbiAgICBvYmplY3QtZml0OiBjb250YWluO1xuICB9XG59XG4iXX0= */
