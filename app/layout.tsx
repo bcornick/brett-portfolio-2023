@@ -4,6 +4,7 @@ import RotatingArcs from './LayoutComponents/RotatingArcs';
 import ProceedBtn from './LayoutComponents/ProceedBtn';
 import Navbar from './LayoutComponents/Navbar';
 import { SectionContextProvider } from './context/section';
+import SiteHeader from './LayoutComponents/SiteHeader';
 
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <SiteHeader />
       <body className={leagueSpartan.className}>
         <SectionContextProvider>
           <Navbar />
