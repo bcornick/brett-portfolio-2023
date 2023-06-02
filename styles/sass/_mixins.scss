@@ -49,6 +49,10 @@
         flex: 4;
         width: 100%;
       }
+      @include screen-tablet-sm {
+        flex: unset;
+        height: 30rem;
+      }
       .sectionTitle {
         font-size: 4rem;
         text-align: center;
