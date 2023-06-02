@@ -24,7 +24,7 @@
     border-radius: $box-border-radius;
     padding: $content-box-padding;
     -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     box-shadow: 0 0 15px rgba($color-dark, 0.15);
     overflow: hidden;
     @include safari-overflow;
@@ -34,7 +34,7 @@
     }
     @include screen-tablet-sm {
       flex-direction: column;
-      height: 100vh;
+      height: 100rem;
       max-height: none;
     }
     .titleBox {
@@ -66,7 +66,8 @@
       }
       @include screen-tablet-sm {
         width: 100%;
-        flex: 10;
+        height: 85rem;
+        max-height: none;
       }
       .gridItem {
         text-align: center;
@@ -98,7 +99,7 @@
         .gridImage {
           transition: all 0.2s;
           -o-object-fit: cover;
-             object-fit: cover;
+          object-fit: cover;
         }
         .text {
           position: absolute;
@@ -111,7 +112,7 @@
             rgba($color-white, 0.85)
           );
           -webkit-backdrop-filter: blur(10px);
-                  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
           border-radius: $btn-border-radius;
           box-shadow: 4px 4px 10px rgba($color-dark, 0.25);
           padding: 1rem 1.8rem;

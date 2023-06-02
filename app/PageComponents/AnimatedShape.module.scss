@@ -19,12 +19,12 @@
 }
 
 .staticImg {
-  flex: 1;
+  height: 25rem;
   position: relative;
   width: 100%;
   .shape {
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 
