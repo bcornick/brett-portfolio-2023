@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import pin from '@/public/location.svg';
-import brett from '@/public/brett.png';
+import brett from '@/public/brett.webp';
 import styles from './Hero.module.scss';
 
 const skills = [
