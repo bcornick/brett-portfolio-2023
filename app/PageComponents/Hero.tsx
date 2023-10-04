@@ -64,7 +64,9 @@ const Hero = () => {
           <h3 className={styles.experience}>
             <span>7+</span>years experience
           </h3>
-          <h3 className={styles.degree}>MSc Computational Materials Science</h3>
+          <h3 className={styles.degree}>
+            PhD Student, Climate Venture Science
+          </h3>
         </div>
       </section>
     </div>
