@@ -3,13 +3,19 @@ import Image from 'next/image';
 import shape from '@/public/shape2.jpg';
 import ucla from '@/public/ucla.jpg';
 import usc from '@/public/usc.jpg';
-import extension from '@/public/extension.jpg';
+import dsv from '@/public/dsv.jpg';
 import AnimatedShape from './AnimatedShape';
 import styles from './Education.module.scss';
 
 const spline = 'https://prod.spline.design/BOSpP7BJHR44A0a2/scene.splinecode';
 
 const degrees = [
+  {
+    title: 'PhD Climate Venture Science',
+    description: 'DSV 2026',
+    image: dsv,
+    link: 'https://deepscienceventures.com/venture-science-doctorate',
+  },
   {
     title: 'MSc Computational Materials Science',
     description: 'UCLA 2018',
@@ -19,11 +25,6 @@ const degrees = [
     title: 'BS Chemical Engineering - Nanotechnology',
     description: 'USC 2016',
     image: usc,
-  },
-  {
-    title: 'Blockchain Management',
-    description: 'UCLA Extension 2020',
-    image: extension,
   },
 ];
 
@@ -56,6 +57,15 @@ const Education = () => {
                 <h3 className={styles.itemTitle}>{degree.title}</h3>
                 <p className={styles.description}>{degree.description}</p>
               </div>
+              {degree.link && (
+                <a
+                  className={styles.popBtn}
+                  href={degree.link}
+                  target="_blank"
+                  rel="noreferrer">
+                  &rarr;
+                </a>
+              )}
             </div>
           ))}
         </div>
