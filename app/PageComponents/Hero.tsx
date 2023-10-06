@@ -65,7 +65,7 @@ const Hero = () => {
             <span>7+</span>years experience
           </h3>
           <h3 className={styles.degree}>
-            PhD Student, Climate Venture Science
+            PhD Candidate, Climate Venture Science
           </h3>
         </div>
       </section>
